@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input name="post_img" type="file" placeholder="Изображение" required>
+        <input name="post_last" type="text" placeholder="Имя" required>
+        <input name="post_first" type="text" placeholder="Фамилия" required>
+        <input name="post_email" type="email" placeholder="Email" required>
+        <input name="post_phone" type="text" placeholder="Номер телефона" required>
+        <button type="submit">Создать Пост</button>
+    </form>
+</body>
+</html>
